@@ -18,7 +18,7 @@ public class Common {
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 		String currentdir =System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", currentdir+"//drivers//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", currentdir+"//drivers//chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		driver =new ChromeDriver(options);
 		}
@@ -26,7 +26,7 @@ public class Common {
 		else if(browser.equalsIgnoreCase("firefox"))
 		{
 		String currentdir =System.getProperty("user.dir");
-		System.setProperty("webdriver.gecko.driver", currentdir+"//drivers//geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", currentdir+"//drivers//geckodriver");
 		driver =new FirefoxDriver();
 		}
 		

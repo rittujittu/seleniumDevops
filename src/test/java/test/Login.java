@@ -17,7 +17,7 @@ public class Login extends Base{
 	}
 	
   @Test
-  public static void main(String args[]) {
+  public void test() {
 	  LoginValidation Login =new LoginValidation(driver);
 	  String message= Login.login("devops", "test");
 	  String expected= "Login Succeeded";

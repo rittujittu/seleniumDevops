@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -18,7 +19,8 @@ public class Common {
 		{
 		String currentdir =System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", currentdir+"//drivers//chromedriver.exe");
-		driver =new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		driver =new ChromeDriver(options);
 		}
 		
 		else if(browser.equalsIgnoreCase("firefox"))

@@ -24,7 +24,7 @@ public class Common {
 		else if(browser.equalsIgnoreCase("firefox"))
 		{
 		String currentdir =System.getProperty("user.dir");
-		System.setProperty("webdriver.gecko.driver", currentdir+"\\drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", currentdir+"//drivers//geckodriver.exe");
 		driver =new FirefoxDriver();
 		}
 		

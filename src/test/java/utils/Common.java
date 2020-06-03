@@ -17,7 +17,7 @@ public class Common {
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 		String currentdir =System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", currentdir+"\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", currentdir+"//drivers//chromedriver.exe");
 		driver =new ChromeDriver();
 		}
 		

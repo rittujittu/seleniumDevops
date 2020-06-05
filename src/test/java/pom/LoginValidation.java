@@ -14,15 +14,15 @@ public class LoginValidation {
 
 	//elements
 	@CacheLookup
-	@FindBy(name="login")
+	@FindBy(xpath="//input[@name='login']")
 	WebElement loginname;
 
 	@CacheLookup
-	@FindBy(name="password")
+	@FindBy(xpath="//input[@name='password']")
 	WebElement passwd;
 
 	@CacheLookup
-	@FindBy(name="click")
+	@FindBy(xpath="//input[@name='click']")
 	WebElement loginbutton;
 	
 	@CacheLookup

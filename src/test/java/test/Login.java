@@ -17,7 +17,7 @@ public class Login extends Base{
 	}
 	
   @Test
-  public void test() {
+  public void test() throws InterruptedException {
 	  LoginValidation Login =new LoginValidation(driver);
 	  String message= Login.login("devops", "test");
 	  String expected= "Login Succeeded";

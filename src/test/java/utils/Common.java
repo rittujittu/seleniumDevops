@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 
 public class Common {
@@ -29,7 +30,10 @@ public class Common {
 		String currentdir =System.getProperty("user.dir");
 		//System.setProperty("webdriver.gecko.driver", currentdir+"//drivers//geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", "/home/edureka/Downloads/geckodriver");
-		driver =new FirefoxDriver();
+		FirefoxOptions options = new FirefoxOptions();
+		options.addArguments("--headless");
+		//WebDriver driver = new FirefoxDriver(options);
+		driver =new FirefoxDriver(options);
 		}
 		
 	 

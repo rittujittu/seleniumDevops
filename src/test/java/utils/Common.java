@@ -28,7 +28,7 @@ public class Common {
 		{
 		String currentdir =System.getProperty("user.dir");
 		//System.setProperty("webdriver.gecko.driver", currentdir+"//drivers//geckodriver.exe");
-		System.setProperty("webdriver.gecko.driver", "/home/edureka/downloads/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/home/edureka/Downloads/geckodriver");
 		driver =new FirefoxDriver();
 		}
 		

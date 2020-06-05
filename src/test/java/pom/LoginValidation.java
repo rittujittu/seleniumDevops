@@ -37,7 +37,7 @@ public class LoginValidation {
 	//methods
 	public String login(String username,String password) throws InterruptedException
 	{
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		//loginname.clear();
 		loginname.sendKeys(username);
 		

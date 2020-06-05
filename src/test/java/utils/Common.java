@@ -20,6 +20,7 @@ public class Common {
 		String currentdir =System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
 		driver =new ChromeDriver(options);
 		}
 		

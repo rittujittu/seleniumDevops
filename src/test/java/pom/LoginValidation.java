@@ -35,8 +35,9 @@ public class LoginValidation {
 		PageFactory.initElements(driver, this);
 	}	
 	//methods
-	public String login(String username,String password)
+	public String login(String username,String password) throws InterruptedException
 	{
+		Thread.sleep(10000);
 		loginname.clear();
 		loginname.sendKeys(username);
 		

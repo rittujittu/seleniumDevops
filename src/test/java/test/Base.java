@@ -13,7 +13,7 @@ public class Base {
 WebDriver driver;
   @BeforeSuite
   public void beforeSuite() {
-	  common.setup("firefox", "http://localhost:3001");
+	  common.setup("chrome", "http://localhost:3001");
 	 driver= common.getDriver();
   }
 

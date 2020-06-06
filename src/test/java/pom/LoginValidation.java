@@ -1,5 +1,7 @@
 package pom;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,15 +39,21 @@ public class LoginValidation {
 	//methods
 	public String login(String username,String password) throws InterruptedException
 	{
-		Thread.sleep(30000);
-		//loginname.clear();
+		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
+		WebDriverWait wait=new WebDriverWait(driver,30);
+		
+		wait.until(ExpectedConditions.visibilityOf(loginname));
+		loginname.clear();
 		loginname.sendKeys(username);
 		
+		wait.until(ExpectedConditions.visibilityOf(passwd));
 		passwd.clear();
 		passwd.sendKeys(password);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(loginbutton));
 		loginbutton.click();
 
-		WebDriverWait wait=new WebDriverWait(driver,30);
+		
 		wait.until(ExpectedConditions.visibilityOf(sucessmessage));
 		String s= sucessmessage.getText();
 		return s;
